@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom"
 import { useContext, useEffect, useState } from "react";
 import { ApiContext} from "../contexts/ApiContext";
 import MediaCard from "../components/MediaCard";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 export default function Media(){
@@ -55,25 +58,25 @@ export default function Media(){
             {searchResults.length > 0 && 
             <div>
                 <h1> {searchResults[0].l} - {searchResults[0].qid}</h1> 
-                {/* //renders the title of the movie or tv show of the search results */}
-                { searchResults.map(result => {
-                   return <MediaCard key={result.id} 
-                   cardTitle={result.l} 
-                   imageUrl={result.i.imageUrl}  
-                   cardRank= {result.rank} 
-                   typeMedia= {result.quid}
-                   /> 
-                })
 
-
-                }
-                {/* { searchResults.map((title) => {
-                        return (
-                            <h1>{title.l}</h1>
-                        )   
-                    })
-                } */}
-
+                {/* container here with roes and columns 
+                put the card in columns - responsively */}
+                <Container fluid>
+                    <Row style={{display: 'flex', flexWrap:'wrap'}}>
+                        {/* //renders the title of the movie or tv show of the search results */}
+                        {searchResults.map(result => {
+                            return <Col xs={12} sm={6} md={4} lg={3}> 
+                                <MediaCard key={result.id} 
+                                    cardTitle={result.l} 
+                                    imageUrl={result.i ? result.i.imageUrl : ''}  // -> this checks if "i" exists 
+                                    cardRank= {result.rank} 
+                                    typeMedia= {result.quid}
+                                /> 
+                              </Col>                      
+                         })}
+                        
+                     </Row>
+                 </Container>
 
                 
             </div>
