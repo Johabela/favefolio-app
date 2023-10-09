@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useContext, useEffect, useState } from "react";
 import { ApiContext} from "../contexts/ApiContext";
+import MediaCard from "../components/MediaCard";
 
 
 export default function Media(){
@@ -53,16 +54,28 @@ export default function Media(){
             {/* once the page load the data is saved to the state */}
             {searchResults.length > 0 && 
             <div>
-                {
-                    // renders the title of the movie or tv show  of the search results */}
-                    searchResults.map((title) => {
+                <h1> {searchResults[0].l} - {searchResults[0].qid}</h1> 
+                {/* //renders the title of the movie or tv show of the search results */}
+                { searchResults.map(result => {
+                   return <MediaCard key={result.id} 
+                   cardTitle={result.l} 
+                   imageUrl={result.i.imageUrl}  
+                   cardRank= {result.rank} 
+                   typeMedia= {result.quid}
+                   /> 
+                })
+
+
+                }
+                {/* { searchResults.map((title) => {
                         return (
                             <h1>{title.l}</h1>
-                        )
+                        )   
                     })
-                }
-              
-                {/* <h1> {searchResults[0].l} - {searchResults[0].qid}</h1>  */}
+                } */}
+
+
+                
             </div>
             }
         </div>

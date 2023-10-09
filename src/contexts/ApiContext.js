@@ -8,7 +8,7 @@ export default function ApiProvider({children}){
 
     // eslint-disable-next-line no-template-curly-in-string
     const [apiUrl, setApiUrl] = useState("https://imdb-movies-web-series-etc-search.p.rapidapi.com/"); 
-    
+
     return (
         <ApiContext.Provider value ={
             {
@@ -20,7 +20,6 @@ export default function ApiProvider({children}){
         </ApiContext.Provider>
     
     );
-
 
 }
 
