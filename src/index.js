@@ -13,10 +13,10 @@ root.render(
     <ApiProvider>
       <BrowserRouter>
         <Routes>
-          {/* home page */}
+          {/* Home page */}
            <Route path="/" element={<App />}/>
-          {/* set up dynamic route handling urls with .json suffix*/}
-           <Route path="/:query.json" element={<Media />}/>
+           {/* MediaSearch Page */}
+           <Route path="/:titleName" element={<Media />}/>
          </Routes>
 
       </BrowserRouter>

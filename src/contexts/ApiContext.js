@@ -6,13 +6,14 @@ export const ApiContext =  createContext (null);
 
 export default function ApiProvider({children}){
 
-    const [apiUrl, setApiUrl] = useState("https://imdb-movies-web-series-etc-search.p.rapidapi.com"); 
-
+    // eslint-disable-next-line no-template-curly-in-string
+    const [apiUrl, setApiUrl] = useState("https://imdb-movies-web-series-etc-search.p.rapidapi.com/"); 
+    
     return (
         <ApiContext.Provider value ={
             {
                 api: apiUrl, 
-                serApi: setApiUrl
+                setApi: setApiUrl
             }
         }>
             {children}
@@ -22,4 +23,5 @@ export default function ApiProvider({children}){
 
 
 }
+
 
