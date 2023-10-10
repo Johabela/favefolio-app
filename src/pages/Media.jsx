@@ -53,11 +53,12 @@ export default function Media(){
 
     return (
         <div>
-            <h1>Media Search </h1>
+            <h1>Media</h1>
+            <h2>Movie and Tv SHow Search </h2>
             {/* once the page load the data is saved to the state */}
             {searchResults.length > 0 && 
             <div>
-                <h1> {searchResults[0].l} - {searchResults[0].qid}</h1> 
+                {/* <h1> {searchResults[0].l} - {searchResults[0].qid}</h1>  */}
 
                 {/* container here with roes and columns 
                 put the card in columns - responsively */}
@@ -65,15 +66,17 @@ export default function Media(){
                     <Row style={{display: 'flex', flexWrap:'wrap'}}>
                         {/* //renders the title of the movie or tv show of the search results */}
                         {searchResults.map(result => {
-                            return <Col xs={12} sm={6} md={4} lg={3}> 
-                                <MediaCard key={result.id} 
+                            // the key prop needs to be assign to all the elements of the component 
+                            return <Col key={result.id} xs={12} sm={6} md={4} lg={3}> 
+                                <MediaCard 
                                     cardTitle={result.l} 
                                     imageUrl={result.i ? result.i.imageUrl : ''}  // -> this checks if "i" exists 
                                     cardRank= {result.rank} 
                                     typeMedia= {result.quid}
                                 /> 
                               </Col>                      
-                         })}
+                         }
+                         )}
                         
                      </Row>
                  </Container>
