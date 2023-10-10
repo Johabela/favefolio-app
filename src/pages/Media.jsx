@@ -2,9 +2,12 @@ import { useParams } from "react-router-dom"
 import { useContext, useEffect, useState } from "react";
 import { ApiContext} from "../contexts/ApiContext";
 import MediaCard from "../components/MediaCard";
+import './styles.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+import SearchBar from '../components/MediaSerachBar' 
 
 
 export default function Media(){
@@ -55,6 +58,8 @@ export default function Media(){
         <div>
             <h1>Media</h1>
             <h2>Movie and Tv SHow Search </h2>
+
+            <SearchBar /> 
             {/* once the page load the data is saved to the state */}
             {searchResults.length > 0 && 
             <div>
@@ -62,7 +67,7 @@ export default function Media(){
 
                 {/* container here with roes and columns 
                 put the card in columns - responsively */}
-                <Container fluid>
+                <Container fluid >
                     <Row style={{display: 'flex', flexWrap:'wrap'}}>
                         {/* //renders the title of the movie or tv show of the search results */}
                         {searchResults.map(result => {

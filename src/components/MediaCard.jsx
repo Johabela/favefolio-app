@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
+
 function MediaCard(props) {
   return (
     <Card style={{ width: '18rem', display: 'flex'}}>
@@ -8,7 +9,7 @@ function MediaCard(props) {
         <Card.Title>
             {props.cardTitle}
         </Card.Title>
-        <Card.Img variant="top" src={props.imageUrl} style={{maxHeight: 342, maxWidth: 245, marginTop: 15}} className="mx-auto" />
+        <Card.Img variant="top" src={props.imageUrl} style={{maxHeight: 342, maxWidth: 245, marginTop: 15}}  />
         <Card.Text>
           {props.cardRank}
           {props.typeMedia}
