@@ -1,9 +1,10 @@
 import {useState} from "react"
 import { useNavigate } from "react-router-dom";
 
-
+// media search bar  function 
 const SearchBar = () => {
 
+// using hooks navigate to create the search bar 
     const [query, setQuery] = useState("")
 
 	const navigate = useNavigate();
@@ -13,6 +14,7 @@ const SearchBar = () => {
         setQuery(e.target.value) 
     }
 
+//  help to link and title search from the url to the search bar 
 	const handleSubmit = (event) => {
 		console.log(query);
 		navigate ('/' + query);

@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import SearchBar from '../components/MediaSerachBar' 
+import SearchBar from '../components/MediaSearchBar' 
 
 
 export default function Media(){
