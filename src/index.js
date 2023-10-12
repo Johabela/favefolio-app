@@ -3,10 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ApiProvider from './contexts/ApiContext' 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Media from './pages/Media';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ApiProvider>
+      <BrowserRouter>
+        <Routes>
+          {/* Home page */}
+           <Route path="/" element={<App />}/>
+           {/* MediaSearch Page */}
+           <Route path="/:titleName" element={<Media />}/>
+         </Routes>
+
+      </BrowserRouter>
+
+    </ApiProvider>
     <App />
   </React.StrictMode>
 );
