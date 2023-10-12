@@ -1,5 +1,7 @@
 import {useState} from "react"
 import { useNavigate } from "react-router-dom";
+import styles from '../pages/styles.css'
+
 
 // media search bar  function 
 const SearchBar = () => {
@@ -22,7 +24,13 @@ const SearchBar = () => {
 	}
 
 	return (
-        <div className="w-full max-w-xl flex mx-auto p-20 text-xl">
+
+        <div className={`${styles["centered-container"]} ${styles[ "search-bar"]}`}>
+            <input
+                type="text"
+                className={styles["search-input"]}
+
+            <div className="w-full max-w-xl flex mx-auto p-20 text-xl">
             <input
                 type="text"
                 className="w-full placeholder-gray-400 text-gray-900 p-4"
@@ -31,7 +39,12 @@ const SearchBar = () => {
                 value={query}
             />
 
-			<button onClick={handleSubmit} className="bg-white p-4">🔍</button>
+
+ 	 		<button onClick={handleSubmit} className={styles["search-button"]}>
+            🔍
+      </button>
+
+
         </div>
     );
 };
