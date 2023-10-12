@@ -7,6 +7,9 @@ import ApiProvider from './contexts/ApiContext'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Media from './pages/Media';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HomePage from './pages/HomePage';
+import Restaurants from './pages/Restaurants'
+import Books from './pages/Books';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,9 +18,13 @@ root.render(
       <BrowserRouter>
         <Routes>
           {/* Home page */}
-           <Route path="/" element={<App />}/>
+           <Route path="/" element={<HomePage />}/>
            {/* MediaSearch Page */}
            <Route path="/:titleName" element={<Media />}/>
+           {/* Restaurants */}
+           <Route path="/" element={<Restaurants />}/>
+           {/* Book & eBooks */}
+           <Route path="/" element={<Books />}/>
          </Routes>
 
       </BrowserRouter>
