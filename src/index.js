@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage';
 import Restaurants from './pages/Restaurants'
 import Books from './pages/Books';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           {/* Home page */}
+
            <Route path="/" element={<HomePage />}/>
            {/* MediaSearch Page */}
            <Route path="/:titleName" element={<Media />}/>
@@ -25,6 +27,11 @@ root.render(
            <Route path="/" element={<Restaurants />}/>
            {/* Book & eBooks */}
            <Route path="/" element={<Books />}/>
+
+           <Route path="/" element={<App />}/>
+           {/* MediaSearch Page */}
+           <Route path="/:titleName" element={<Media />}/>
+
          </Routes>
 
       </BrowserRouter>
