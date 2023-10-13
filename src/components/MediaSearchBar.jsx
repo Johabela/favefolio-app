@@ -27,7 +27,7 @@ const SearchBar = () => {
             <input
                 type="text"
                 className={styles["search-input"]}
-                placeholder="Search"
+                placeholder="Search  "
                 onChange={search}
                 value={query}
             />

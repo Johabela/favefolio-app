@@ -56,8 +56,8 @@ export default function Media(){
 
     return (
         <div>
-            <h1>Media</h1>
-            <h2>Movie and Tv Show Search </h2>
+            <h1>Movie and Tv Show Search</h1>
+     
 
             <SearchBar /> 
             {/* once the page load the data is saved to the state */}

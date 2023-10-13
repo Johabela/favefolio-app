@@ -27,3 +27,6 @@ body {
   background-color: white;
   padding: 4px;
 }
+.nav-list li {
+  margin: 0 10px; /* Add some spacing between list items */
+}

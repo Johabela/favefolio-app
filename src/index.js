@@ -1,32 +1,36 @@
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ApiProvider from './contexts/ApiContext' 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Media from './pages/Media';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage';
 import Restaurants from './pages/Restaurants'
 import Books from './pages/Books';
+import MediaStorage from './pages/MediaStorage';
+import Navbar from './components/Navbar'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
     <ApiProvider>
       <BrowserRouter>
-        <Routes>
-          {/* Home page */}
-           <Route path="/" element={<HomePage />}/>
-           {/* MediaSearch Page */}
-           <Route path="/:titleName" element={<Media />}/>
-           {/* Restaurants */}
-           <Route path="/" element={<Restaurants />}/>
-           {/* Book & eBooks */}
-           <Route path="/" element={<Books />}/>
-         </Routes>
 
+
+        <Navbar /> 
+
+        <Routes>
+           <Route path="/" element={<HomePage />}/>
+           <Route path="/:titleName" element={<Media />}/>
+           <Route path="/:titleName/storage" element={<MediaStorage />}/>
+           <Route path="/restaurants" element={<Restaurants />}/>
+           <Route path="/books" element={<Books />}/>
+        </Routes>
       </BrowserRouter>
 
     </ApiProvider>
