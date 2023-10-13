@@ -5,7 +5,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ApiProvider from './contexts/ApiContext' 
-
 import Media from './pages/Media';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage';
@@ -13,6 +12,7 @@ import Restaurants from './pages/Restaurants'
 import Books from './pages/Books';
 import MediaStorage from './pages/MediaStorage';
 import Navbar from './components/Navbar'
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -28,9 +28,8 @@ root.render(
            <Route path="/:titleName/storage" element={<MediaStorage />}/>
            <Route path="/restaurants" element={<Restaurants />}/>
            <Route path="/books" element={<Books />}/>
-        </Routes>
+         </Routes>
       </BrowserRouter>
-
     </ApiProvider>
     <App />
   </React.StrictMode>

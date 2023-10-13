@@ -56,7 +56,13 @@ export default function Media(){
 
     return (
         <div>
+
             <h1>Movie and Tv Show Search</h1>
+
+            <h1>Media</h1>
+
+            <h2>Movie and Tv Show Search </h2>
+
             <SearchBar /> 
             {/* once the page load the data is saved to the state */}
             {searchResults.length > 0 && 

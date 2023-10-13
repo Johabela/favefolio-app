@@ -26,6 +26,7 @@ const SearchBar = () => {
 	return (
 
         <div className={`${styles["centered-container"]} ${styles[ "search-bar"]}`}>
+
             <input
                 type="text"
                 className={styles["search-input"]}
