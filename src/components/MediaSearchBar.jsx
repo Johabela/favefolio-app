@@ -2,6 +2,7 @@ import {useState} from "react"
 import { useNavigate } from "react-router-dom";
 import styles from '../pages/styles.css'
 
+
 // media search bar  function 
 const SearchBar = () => {
 
@@ -23,6 +24,7 @@ const SearchBar = () => {
 	}
 
 	return (
+
         <div className={`${styles["centered-container"]} ${styles[ "search-bar"]}`}>
             <input
                 type="text"
@@ -32,9 +34,12 @@ const SearchBar = () => {
                 value={query}
             />
 
-			<button onClick={handleSubmit} className={styles["search-button"]}>
+
+ 	 		<button onClick={handleSubmit} className={styles["search-button"]}>
             🔍
-            </button>
+      </button>
+
+
         </div>
     );
 };

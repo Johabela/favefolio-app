@@ -14,16 +14,14 @@ import Books from './pages/Books';
 import MediaStorage from './pages/MediaStorage';
 import Navbar from './components/Navbar'
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
     <ApiProvider>
       <BrowserRouter>
-
-
         <Navbar /> 
-
         <Routes>
            <Route path="/" element={<HomePage />}/>
            <Route path="/:titleName" element={<Media />}/>
