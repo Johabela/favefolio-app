@@ -51,7 +51,8 @@ export default function Media(){
 
         // needs to call the async function apiRequest to render data 
          apiRequest();
-
+         
+    // eslint-disable-next-line react-hooks/exhaustive-deps    
     }, [titleName]);
 
     return (
