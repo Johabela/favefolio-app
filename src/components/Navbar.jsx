@@ -19,7 +19,7 @@ export default function Navbar(props){
                 </li>
                 <li> 
                     <NavLink  to="/:titleName" style={({isActive}) => isActive ? {color:"black"}: undefined} >
-                    Media Search 
+                    Media 
                     </NavLink>
                 </li>
 

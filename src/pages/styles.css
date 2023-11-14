@@ -14,12 +14,15 @@ body {
 .search-bar {
   width: 100%; /* Adjust the width as needed */
   text-align: center;
+
 }
 
 .search-input {
   width: 100%;
   padding: 4px;
   placeholder: gray;
+
+
 }
 
 .search-button {

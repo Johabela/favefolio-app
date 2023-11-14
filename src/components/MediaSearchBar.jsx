@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from '../pages/styles.css'
 
 
-// media search bar  function 
+// media search bar function 
 const SearchBar = () => {
 
 // using hooks navigate to create the search bar 
@@ -39,9 +39,7 @@ const SearchBar = () => {
  	 		<button onClick={handleSubmit} className={styles["search-button"]}>
             🔍
       </button>
-
-
-        </div>
+    </div>
     );
 };
 
